@@ -1,0 +1,100 @@
+ul {
+    color: rgb(0, 0, 0);
+    display: block;
+    border: 3px solid yellow;
+    width: 350px;
+    border-radius: 5px;
+    margin: 5px auto;
+}
+
+ol {
+    color: rgb(0, 4, 4);
+    border: 3px solid red;
+    border-radius: 5px;
+    width: 350px;
+    display:block;
+    margin: 5px auto;
+    
+}
+body {
+    background-color: beige;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    width: 350px;
+    border: 3px solid rgba(0, 30, 255, 0.409);
+    border-radius: 5px;
+    margin: 3px;
+    padding: 5px;
+    display: block;
+    margin: 5px auto;
+}
+
+.beige {
+    fill: rgb(145, 92, 26);
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 375px;
+    display: block;
+    margin-bottom: 50px;
+    margin: 5px auto;
+}
+
+p:hover {
+    background-color: rgb(221, 245, 220);
+    box-shadow: 5px 5px 5px brown;
+}
+
+html {
+    font-size: 10px;
+    /* px means "pixels": the base font size is now 10 pixels high */
+    font-family: "Open Sans", sans-serif;
+    /* this should be the rest of the output you got from Google Fonts */
+    background-color: #00539f;
+}
+
+.nice-font {
+    font-family: "Playwrite MX", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    display: block;
+    margin: 5px auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 5px black;
+}
+img {
+    border: 5px solid green;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+img:hover{
+    box-shadow: 5px yellow;
+}
+h2 {
+    width: 350px;
+    margin: 5px auto;
+    border-bottom: 3px solid black;
+}
