@@ -1,102 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Life savings giveaway!!</title>
 
-
     <style>
-        body {
-            text-align: center;
-        }
+      body {
+        text-align: center;
+      }
 
-        form {
-            display: inline-block;
-            /*form outline*/
-            padding: 1em;
-            border: 1px solid #ccc;
-            border-radius: 1em;
-            font: 1em sans-serif;
-        }
+      form {
+        display: inline-block;
+        /*form outline*/
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+        font: 1em sans-serif;
+      }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-        form li+li {
-            margin-top: 1em;
-        }
+      form li + li {
+        margin-top: 1em;
+      }
 
-        label {
-            display: inline-block;
-            min-width: 90px;
-            text-align: right;
-        }
+      label {
+        display: inline-block;
+        min-width: 90px;
+        text-align: right;
+      }
 
-        input,
-        textarea {
-            font: 1em sans-serif;
-            width: 300px;
-            box-sizing: border-box;
-            border: 1px solid #999;
-        }
+      input,
+      textarea {
+        font: 1em sans-serif;
+        width: 300px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+      }
 
-        input:focus,
-        textarea:focus {
-            border-color: #000;
-        }
+      input:focus,
+      textarea:focus {
+        border-color: #000;
+      }
 
-        textarea {
-            vertical-align: top;
-            height: 5em;
-        }
+      textarea {
+        vertical-align: top;
+        height: 5em;
+      }
 
-        .button {
-            padding-left: 90px;
-        }
+      .button {
+        padding-left: 90px;
+      }
 
-        button {
-            margin-left: 0.5em;
-            border-radius: 1em;
-        }
+      button {
+        margin-left: 0.5em;
+        border-radius: 1em;
+      }
 
-        p {
-            font: 1em sans-serif;
-        }
+      p {
+        font: 1em sans-serif;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Life savings giveaway!</h1>
-    <p>I will very soon be killing myself, just before that I will hold a giveaway and one lucky subscriber will win all
-        my worldly assets!... sniff</p>
+    <p>
+      I will very soon be killing myself, just before that I will hold a
+      giveaway and one lucky subscriber will win all my worldly assets!... sniff
+    </p>
 
     <form action="/givaway-form" method="post">
-        <ul>
-            <li>
-                <label for="name">Name:</label>
-                <input type="text" id="name-input" name="user_name">
-            </li>
-            <li>
-                <label for="email">Email:</label>
-                <input type="email" name="user_email" id="email-input">
-            </li>
-            <li>
-                <label for="msg">Message:</label>
-                <textarea name="message" id="message-input" cols="30"
-                    rows="10">You are most beautiful my beloved.</textarea>
-            </li>
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <input type="text" id="name-input" name="user_name" />
+        </li>
+        <li>
+          <label for="email">Email:</label>
+          <input type="email" name="user_email" id="email-input" />
+        </li>
+        <li>
+          <label for="msg">Message:</label>
+          <textarea name="message" id="message-input" cols="30" rows="10">lmao skill issue.</textarea
+          >
+        </li>
 
-            <li class="Button">
-                <button type="submit">Submit entry</button>
-            </li>
-        </ul>
-
+        <li class="Button">
+          <button type="submit">Submit entry</button>
+        </li>
+      </ul>
     </form>
-</body>
-
+  </body>
 </html>
