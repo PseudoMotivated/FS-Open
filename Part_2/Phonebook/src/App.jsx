@@ -4,7 +4,8 @@ const App = () => {
   const [persons, setPersons] = useState([]) 
   const [newName, setNewName] = useState('')
 
-const submitHandler = ({event}) => {  
+const submitHandler = (event) => {
+  event.preventDefault()  
 }
 
   return (
