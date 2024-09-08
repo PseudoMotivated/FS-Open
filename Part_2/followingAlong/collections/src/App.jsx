@@ -1,20 +1,38 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import Note from './components/Note'
+import noteAPI from './services/notes'
 
 const App = (props) => {
   const [notes, setNotes] = useState([])
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
 
+  const toggleImportanceOf = (id) => {
+    console.log(`importance of ${id} needs to be toggled`)
+    const note = notes.find(note => note.id === id)
+    const changedNote = { ...note, important: !note.important }
+
+    noteAPI
+    .update(id , changedNote)
+      .then(returnedNote => {
+        setNotes(notes.map(note => note.id !== id ? note : returnedNote))
+      })
+      .catch(error => {
+        alert(
+          `${note.content} was already deleted from the server`
+        )
+        setNotes(notes.filter(note => note.id !== id))
+      })
+  }
+
 
   const hook = () => {
     console.log('effect')
-    axios
-      .get('http://localhost:3001/notes')
-      .then(response => {
+    noteAPI
+    .getAll()
+      .then(initialNotes => {
         console.log('bobby kept his promise')
-        setNotes(response.data)
+        setNotes(initialNotes)
       })
   }
 
@@ -32,11 +50,17 @@ const App = (props) => {
     //    console.log("Button was molested", event.target)
     const noteObject = {
       content: newNote,
-      important: Math.random() > 0.5,
-      id: String(notes.length + 1)
+      important: Math.random() > 0.5
     }
-    setNotes(notes.concat(noteObject))
-    setNewNote('')
+    
+    noteAPI
+    .create(noteObject)
+    .then(returnedNote => {
+      console.log(returnedNote)
+      setNotes(notes.concat(returnedNote))
+      setNewNote('')
+    })
+    
   }
 
 
@@ -55,7 +79,11 @@ const App = (props) => {
       </div>
       <ul>
         {notesToShow.map(note => // Arrays returned by map should have keys in them, that are gotten from the original data.
-          <Note key={note.id} note={note} /> // Now the key is in the note element. Not li. Becuase the note elements are now the array returned by map.
+          <Note 
+          key={note.id} 
+          note={note}
+          toggleImportance={() => toggleImportanceOf(note.id)}
+           /> // Now the key is in the note element. Not li. Becuase the note elements are now the array returned by map.
         )}
       </ul>
       <form onSubmit={addNote}>
