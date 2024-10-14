@@ -15,7 +15,7 @@ const forget = (id) => {
 }
 
 const update = (id, person) => {
-    axios.put(`${baseURL}/${id}`, person).then(response => response.data)
+    return axios.put(`${baseURL}/${id}`, person).then(response => response.data)
 }
 
 export default {getAll, create, forget, update}

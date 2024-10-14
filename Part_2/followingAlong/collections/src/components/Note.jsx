@@ -1,7 +1,7 @@
 const Note = ({ note , toggleImportance }) => {
     //console.log(note)
     return (
-        <li>
+        <li className="note">
         {note.content} 
         {note.important} <br /> 
         <button onClick={toggleImportance}>

@@ -1,0 +1,72 @@
+.app {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "title title" "notif notif" "form search" "form list";
+    font-size: xx-large;
+}
+
+button {
+    padding: 1rem; 
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: large;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px 2px ;
+    background-color: azure;
+}
+button:hover {
+    box-shadow: 0px 0px 0px 0px;
+
+}
+
+.search {
+    grid-area: search;
+    padding: 1rem;
+}
+
+input {
+    min-width: 15rem;
+    font-size: xx-large;
+}
+
+.persons-list {
+    grid-area: list;
+    padding: 1rem;
+
+}
+
+.person-entry {
+    margin: 0.5rem;
+}
+.person-form {
+    grid-area: form;
+    padding-left: 1rem;
+}
+.person-form input {
+    margin: 1rem;
+
+}
+
+.notification {
+    border: 0.5rem solid rgb(86, 211, 13);
+    background-color: rgba(95, 168, 10, 0.548);
+}
+.notification-alert {
+    border: 0.5rem solid yellow;
+    background-color: lightyellow;
+
+}
+.notification-error {
+    border: 0.5rem solid red;
+    background-color: lightcoral;
+
+}
+
+.notification, .notification-alert, .notification-error {
+    padding: 0.5rem;
+    font-size: medium;
+    border-radius: 1rem;
+    margin: 1rem;
+    grid-area: notif;
+}
