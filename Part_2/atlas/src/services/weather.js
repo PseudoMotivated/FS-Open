@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 //DONT PUSH INTO GIT
-const APIkey = 'e904f28eb3091ef82098eaaf3b321290'
+const APIkey = 'XXXXXXXXXX'
 
 const getWeather = ({city}) => {
 
