@@ -1,10 +1,11 @@
 const express = require('express')
+// const cors = require('cors')
 const app = express()
 
 app.use((request, response, next) => {
   response.header("Access-Control-Allow-Origin", "https://firecamp.dev"); // update to match the domain you will make the request from
-  response.header("Access-Control-Allow-Origin", "http://127.0.0.1:5173"); // update to match the domain you will make the request from
-  response.header("Access-Control-Allow-Origin", "http://localhost:5173"); // update to match the domain you will make the request from
+  response.header("Access-Control-Allow-Origin", "http://127.0.0.1:5173"); 
+  response.header("Access-Control-Allow-Origin", "http://localhost:5173"); 
   response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
