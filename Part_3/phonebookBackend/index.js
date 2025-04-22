@@ -1,0 +1,70 @@
+const express = require('express')
+const app = express()
+
+app.use((request, response, next) => {
+  response.header("Access-Control-Allow-Origin", "https://firecamp.dev"); // update to match the domain you will make the request from
+  response.header("Access-Control-Allow-Origin", "http://127.0.0.1:5173"); // update to match the domain you will make the request from
+  response.header("Access-Control-Allow-Origin", "http://localhost:5173"); // update to match the domain you will make the request from
+  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+app.use(express.json())
+
+
+let persons = [
+    { 
+      "id": "1",
+      "name": "Arto Hellas", 
+      "number": "040-123456"
+    },
+    { 
+      "id": "2",
+      "name": "Ada Lovelace", 
+      "number": "39-44-5323523"
+    },
+    { 
+      "id": "3",
+      "name": "Dan Abramov", 
+      "number": "12-43-234345"
+    },
+    { 
+      "id": "4",
+      "name": "Mary Poppendieck", 
+      "number": "39-23-6423122"
+    }
+]
+
+generateId = () => {
+  const maxId = persons.length > 0
+  ? Math.max(
+    ...notes.map(
+      n => Number(n.id)  // Takes the notes array and makes it into an array of id's.
+    )                    // Then it finds the max. If max is undefined; returns zero.
+  )                      // Assigns maxId whatever is returned.
+  : 0;
+  return String(maxId + 1);
+}
+
+app.get('/api/persons' , (request, response) => {
+    response.json(persons)
+})
+
+
+
+app.get('/info', (request, response) => {
+  response.send(`<p>Phonebook has info for ${persons.length} people.</p>
+  <p>${Date()}</p>
+  `)
+})
+
+
+
+app.get('/', (request, response) => {
+  response.send('<h1>Hello World!</h1>')
+})
+
+
+const PORT = 3001
+app.listen(PORT, () => {
+  console.log(`running on port ${PORT}`)
+})

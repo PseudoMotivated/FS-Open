@@ -1,0 +1,23 @@
+{
+  "name": "phonebookbackend",
+  "version": "1.0.0",
+  "description": "Backend for the phonebook app. Exerco",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PseudoMotivated/FS-Open.git"
+  },
+  "author": "PseudoMotivated",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PseudoMotivated/FS-Open/issues"
+  },
+  "homepage": "https://github.com/PseudoMotivated/FS-Open#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
